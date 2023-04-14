@@ -1,0 +1,545 @@
+/*
+CONTENT:
+Body
+Links
+Header
+Main
+Media queries
+*/
+
+/* Body */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #81aeab;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 20px;
+    color: #333;
+    font-family: Corbel, Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    text-align: justify;
+}
+
+body, input, label, button, a.article_button {
+    font-size: 15px;
+}
+
+input,
+textarea,
+button {
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-family: Corbel, Arial, Helvetica, sans-serif;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
+article a:not(.article_button) {
+    text-decoration: underline;
+    color: red;
+}
+
+article a:not(.article_button):visited {
+    color: rgb(177,0,0);
+}
+
+#links {
+    text-align: center;
+    padding: 0 1em;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+#links a {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
+    background-color: rgb(151, 0, 0);
+    border-radius: 50%;
+}
+
+#links a:not(:last-child) {
+    margin-right: 1em;
+}
+
+#links a.main_link {
+    color: rgb(151, 0, 0);
+    background-color: white;
+}
+
+#links a:hover {
+    color: rgb(151, 0, 0);
+    background-color: white;
+}
+
+/* Header */
+
+header#header {
+    margin: 20px 0 40px;
+}
+
+.logo {
+    width: 195px;
+    height: 55px;
+    line-height: 55px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(177,0,0);
+    background-color: white;
+    border-radius: 18px;
+}
+
+nav {
+    margin: 30px 0 40px;
+    background-color: rgb(151, 0, 0);
+    border-radius: 20px;
+}
+
+nav ul {
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li a,
+nav ul li span {
+    display: block;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: rgb(151, 0, 0);
+    border-radius: 20px;
+}
+
+/* Main */
+
+article,
+form,
+aside,
+footer section {
+    padding: 20px;
+    background-color: rgb(235, 232, 217);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.article_form {
+    display: flex;
+    margin: initial;
+    padding: initial;
+    margin-right: 1.5em;
+    background-color: initial;
+    height: 34px;
+}
+
+.article_form > .article_button:not(:last-child) {
+    margin-right: 1.5em;
+}
+
+section header > h1 {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+article header,
+section header {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: #eee;
+    background-color: rgb(0, 106, 141);
+}
+
+article header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article header:only-child {
+    margin-bottom: 0;
+}
+
+section header {
+    margin-bottom: 10px;
+}
+
+article header .time {
+    min-width: 100px;
+    padding: 0 10px;
+}
+
+article header h1 {
+    line-height: 40px;
+}
+
+article header h1:only-child {
+    padding: 0 10px;
+}
+
+article header .comments {
+    min-width: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    right: 0;
+    line-height: 40px;
+    text-align: center;
+}
+
+.articles p {
+    margin-bottom: 18px;
+}
+
+.articles p:last-child {
+    margin-bottom: 0;
+}
+
+article footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: flex-start;
+    min-height: 36px;
+}
+
+article footer > * {
+    display: inline-block;
+}
+
+article footer .delete_button {
+    padding: 0 10px;
+    line-height: 34px;
+    color: #fff;
+    background-color: red;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+article footer .delete_button:hover {
+    color: red;
+    background-color: #fff;
+}
+
+.buttons {
+    display: flex;
+}
+
+.article_button {
+    display: block;
+    padding: 0 10px;
+    line-height: 34px;
+    color: #fff;
+    background-color: rgb(151, 0, 0);
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#reg_form {
+    text-align: left;
+}
+
+.del_article,
+#reg_button {
+    background-color: red;
+}
+
+#reg_button:disabled {
+    background-color: rgb(151, 0, 0);
+}
+
+.article_button:disabled {
+    opacity: 0.3;
+    cursor: initial;
+}
+
+.article_button#add_article_button,
+aside .article_button,
+.article_button.back_button {
+    margin: 0 auto;
+}
+
+.article_button#art_in_page_button {
+    margin: 0;
+}
+
+input#art_in_page {
+    margin-bottom: 9px;
+}
+
+.article_button.back_button {
+    margin-bottom: 1.5em;
+}
+
+aside #login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login_form label {
+    margin: 0 0 9px auto;
+}
+
+.article_button#add_article_button {
+    margin-bottom: 30px;
+}
+
+.article_button:hover:not(:disabled, .del_article) {
+    color: rgb(151, 0, 0);
+    background-color: #fff;
+}
+
+.article_button[href] {
+    max-width: fit-content;
+    white-space: nowrap;
+}
+
+.article_button:hover.del_article {
+    color: red;
+    background-color: #fff;
+}
+
+article form#add_article {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#add_article span {
+    display: block;
+    text-indent: 10px;
+    margin-bottom: .2em;
+}
+
+#add_article input,
+#add_article textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+#add_article textarea {
+    resize: vertical;
+    height: fit-content;
+}
+
+#add_article .article_button {
+    display: inline-block;
+}
+
+#add_article .article_button:last-child {
+    margin: 0 0 0 18px;
+}
+
+aside form {
+    all:initial;
+}
+
+aside form label {
+    display: block;
+}
+
+aside section:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+aside p,
+aside label {
+    font-family: Corbel, Arial, Helvetica, sans-serif;
+}
+
+aside p {
+    margin-bottom: 18px;
+}
+
+aside label {
+    margin-bottom: 9px;
+}
+
+#settings {
+    margin-bottom: 18px;
+}
+
+footer > p {
+    text-align: center;
+    line-height: 34px;
+    max-width: 260px;
+    margin: 10px auto 30px;
+    padding: 0 10px;
+    background-color: rgb(235, 232, 217);
+    border-radius: 15px;
+}
+
+/* Media queries */
+
+@media (min-width: 990px) {
+    body {
+        margin: 0 auto;
+    }
+
+    nav ul li a,
+    nav ul li span {
+        padding: 0 25px;
+    }
+
+    body > .container > * {
+        display: inline-block;
+    }
+
+    body > .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    body > .container main {
+        float: left;
+        width: 630px;
+        max-width: 630px;
+    }
+    
+    body > .container aside {
+        float: right;
+        width: 260px;
+    }
+
+    article footer {
+        flex-direction: row;
+    }
+
+    footer .sections {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    footer section {
+        float: left;
+        max-width: 260px;
+    }
+
+    footer section:first-child {
+        margin-left: 0;
+    }
+
+    footer section {
+        margin: 0 0 30px 30px;
+    }
+}
+
+@media (max-width:480px) {
+    nav ul li {
+        display: block;
+    }
+
+    article header {
+        flex-direction: column;
+    }
+
+    article footer {
+        gap: 0;
+    }
+
+    article footer .info {
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+
+    article footer .buttons,
+    article footer .article_form {
+        flex-direction: column;
+    }
+
+    article footer .article_form {
+        height: fit-content;
+        margin-bottom: 1.5em;
+    }
+
+    article footer .article_button.del_article {
+        margin-bottom: 1.5em;
+    }
+
+    nav ul li a,
+    nav ul li span {
+        line-height: 34px;
+    }
+
+    header:not(#header) h1 {
+        text-align: center;
+    }
+
+    article header h1:only-child {
+        display: block;
+    }
+
+    #add_article .buttons {
+        flex-direction: column;
+    }
+
+    #add_article .article_button,
+    #add_article .article_button:last-child {
+        margin: 18px auto 0;
+    }
+}
+
+@media (max-width: 320px) {
+    * {
+        float: none !important;
+    }
+
+    article header > *,
+    article footer > * {
+        display: block;
+    }
+
+    header:not(#header) {
+        height: fit-content;
+        text-align: center;
+    }
+
+    article header > * {
+        height: fit-content;
+    }
+
+    article header h1:not(:only-child),
+    article header .comments {
+        line-height: 28px;
+    }
+
+    article header .comments {
+        width: auto;
+    }
+}
